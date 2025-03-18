@@ -15,61 +15,61 @@ class SubsequenceServiceImplTest {
     }
 
     @Test
-    void givenValidSubsequence_whenNumDistinct_thenReturnsCorrectCount() {
+    void givenValidSubsequence_whenCountDistinct_thenReturnsCorrectCount() {
         String source = "rabbbit";
         String target = "rabbit";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(3, result);
     }
 
     @Test
-    void givenAnotherValidSubsequence_whenNumDistinct_thenReturnsCorrectCount() {
+    void givenAnotherValidSubsequence_whenCountDistinct_thenReturnsCorrectCount() {
         String source = "babgbag";
         String target = "bag";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(5, result);
     }
 
     @Test
-    void givenSourceShorterThanTarget_whenNumDistinct_thenReturnsZero() {
+    void givenSourceShorterThanTarget_whenCountDistinct_thenReturnsZero() {
         String source = "abc";
         String target = "abcd";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(0, result);
     }
 
     @Test
-    void givenEmptyTarget_whenNumDistinct_thenReturnsOne() {
+    void givenEmptyTarget_whenCountDistinct_thenReturnsOne() {
         String source = "abc";
         String target = "";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(1, result);
     }
 
     @Test
-    void givenEmptySource_whenNumDistinct_thenReturnsZero() {
+    void givenEmptySource_whenCountDistinct_thenReturnsZero() {
         String source = "";
         String target = "abc";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(0, result);
     }
 
     @Test
-    void givenSameStrings_whenNumDistinct_thenReturnsOne() {
+    void givenSameStrings_whenCountDistinct_thenReturnsOne() {
         String source = "abc";
         String target = "abc";
 
-        int result = subsequenceService.numDistinct(source, target);
+        int result = subsequenceService.countDistinct(source, target);
 
         assertEquals(1, result);
     }

@@ -26,7 +26,7 @@ public class SubsequenceCommand implements ApplicationRunner {
             String source = scanner.nextLine();
             System.out.println("Enter the target string:");
             String target = scanner.nextLine();
-            int result = subsequenceService.numDistinct(source, target);
+            int result = subsequenceService.countDistinct(source, target);
             System.out.println("Number of distinct subsequences: " + result);
             System.exit(0);
         }

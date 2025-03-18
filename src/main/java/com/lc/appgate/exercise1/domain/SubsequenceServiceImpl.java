@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class SubsequenceServiceImpl implements SubsequenceService {
 
     @Override
-    public int numDistinct(String source, String target) {
+    public int countDistinct(String source, String target) {
         log.info("Service has been called for source:{} and target:{}", source, target);
         return countOptions(source, target, 0, 0);
     }

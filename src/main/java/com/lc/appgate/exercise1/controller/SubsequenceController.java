@@ -16,7 +16,7 @@ public class SubsequenceController {
 
     @PostMapping
     public SubsequenceResponse countDistinctSubsequences(@RequestBody SubsequenceRequest request) {
-        int count = subsequenceService.numDistinct(request.getSource(), request.getTarget());
+        int count = subsequenceService.countDistinct(request.getSource(), request.getTarget());
         return new SubsequenceResponse(count);
     }
 }
